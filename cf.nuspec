@@ -16,11 +16,7 @@
         <copyright>Arthur Halet</copyright>
         <licenseUrl>https://raw.githubusercontent.com/ArthurHlt/cf-chocolatey/master/LICENSE</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/cf.png</iconUrl>-->
-        <!--<dependencies>
-          <dependency id="" version="__VERSION__" />
-          <dependency id="" />
-        </dependencies>-->
+        <iconUrl>https://cdn.rawgit.com/ArthurHlt/cf-chocolatey/master/icons/cf.png</iconUrl>
     </metadata>
     <files>
         <file src="tools\**" target="tools"/>

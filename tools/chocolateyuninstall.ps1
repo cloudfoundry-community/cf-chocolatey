@@ -7,8 +7,7 @@ $ErrorActionPreference = 'Stop';
 
 $packageName = 'cf'
 $registryUninstallerKeyName = 'cf' #ensure this is the value in the registry
-$installerType = 'EXE'
-$silentArgs = '/S'
+$file = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)/cf.exe"
 $validExitCodes = @(0)
 
 #$osBitness = Get-ProcessorBits
@@ -19,4 +18,4 @@ $validExitCodes = @(0)
 #  $file = (Get-ItemProperty -Path "hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$registryUninstallerKeyName").UninstallString
 #}
 #
-#Uninstall-ChocolateyPackage -PackageName $packageName -FileType $installerType -SilentArgs $silentArgs -validExitCodes $validExitCodes -File $file
+Uninstall-ChocolateyPackage -PackageName $packageName -validExitCodes $validExitCodes -File $file
