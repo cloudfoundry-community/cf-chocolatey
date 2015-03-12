@@ -11,10 +11,10 @@
         <summary>install official command line client for Cloud Foundry.</summary>
         <description>official command line client for Cloud Foundry.
         </description>
-        <projectUrl></projectUrl>
+        <projectUrl>https://github.com/ArthurHlt/cf-chocolatey</projectUrl>
         <tags>cf admin</tags>
-        <copyright></copyright>
-        <licenseUrl></licenseUrl>
+        <copyright>Arthur Halet</copyright>
+        <licenseUrl>https://raw.githubusercontent.com/ArthurHlt/cf-chocolatey/master/LICENSE</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/cf.png</iconUrl>-->
         <!--<dependencies>
