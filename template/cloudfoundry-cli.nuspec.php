@@ -5,7 +5,7 @@ echo <<<END
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
-        <id>cf</id>
+        <id>cloudfoundry-cli</id>
         <title>Cloud Foundry Client</title>
         <version>$version</version>
         <authors>Arthur Halet</authors>

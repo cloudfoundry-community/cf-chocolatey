@@ -23,10 +23,10 @@ if (!is_dir($chocoInstallFolder)) {
 $version = $versionGithub;
 $buildDir = realpath(__DIR__);
 
-mkdir(__DIR__ . '/tools');
+@mkdir(__DIR__ . '/tools');
 ob_start();
-include_once __DIR__ . '/template/cf.nuspec.php';
-file_put_contents(__DIR__ . '/cf.nuspec', ob_get_contents());
+include_once __DIR__ . '/template/cloudfoundry-cli.nuspec.php';
+file_put_contents(__DIR__ . '/cloudfoundry-cli.nuspec', ob_get_contents());
 ob_end_clean();
 
 ob_start();
@@ -34,7 +34,7 @@ include_once __DIR__ . '/template/chocolateyinstall.ps1.php';
 file_put_contents(__DIR__ . '/tools/chocolateyinstall.ps1', ob_get_contents());
 ob_end_clean();
 
-exec($chocoInstallFolder . '\\cpack.exe "' . realpath(__DIR__ . '/cf.nuspec') . '"', $output, $returnVar);
+exec($chocoInstallFolder . '\\cpack.exe "' . realpath(__DIR__ . '/cloudfoundry-cli.nuspec') . '"', $output, $returnVar);
 echo implode("\n", $output);
 echo "\n";
 flush();
@@ -42,7 +42,7 @@ if ($returnVar != 0) {
     echo "exiting";
     exit(1);
 }
-exec($chocoInstallFolder . '\\choco.exe push "' . realpath(__DIR__ . '/cf.' . $version . '.nupkg') . '"', $output);
+exec($chocoInstallFolder . '\\choco.exe push "' . realpath(__DIR__ . '/cloudfoundry-cli.' . $version . '.nupkg') . '"', $output);
 echo implode("\n", $output);
 echo "\n";
 flush();
