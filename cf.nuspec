@@ -4,17 +4,17 @@
     <metadata>
         <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
         <id>cf</id>
-        <title>cf (Install)</title>
+        <title>Cloud Foundry Client</title>
         <version>6.10.0</version>
         <authors>Arthur Halet</authors>
         <owners>Arthur Halet</owners>
         <summary>install official command line client for Cloud Foundry.</summary>
         <description>official command line client for Cloud Foundry.
         </description>
-        <projectUrl>https://github.com/ArthurHlt/cf-chocolatey</projectUrl>
-        <tags>cf admin</tags>
-        <copyright>Arthur Halet</copyright>
-        <licenseUrl>https://raw.githubusercontent.com/ArthurHlt/cf-chocolatey/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/cloudfoundry/cli</projectUrl>
+        <tags>cf cloudfoundry cloud pivotal</tags>
+        <copyright>Pivotal</copyright>
+        <licenseUrl>https://raw.githubusercontent.com/cloudfoundry/cli/master/LICENSE</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://cdn.rawgit.com/ArthurHlt/cf-chocolatey/master/icons/cf.png</iconUrl>
     </metadata>
