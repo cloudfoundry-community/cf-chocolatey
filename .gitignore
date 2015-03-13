@@ -1,2 +1,4 @@
 /.idea
 *.nupkg
+tools/chocolateyinstall.ps1
+cf.nuspec

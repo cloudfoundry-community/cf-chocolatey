@@ -22,6 +22,8 @@ if (!is_dir($chocoInstallFolder)) {
 }
 $version = $versionGithub;
 $buildDir = realpath(__DIR__);
+
+mkdir(__DIR__ . '/tools');
 ob_start();
 include_once __DIR__ . '/template/cf.nuspec.php';
 file_put_contents(__DIR__ . '/cf.nuspec', ob_get_contents());
