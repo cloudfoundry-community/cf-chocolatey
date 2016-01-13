@@ -8,7 +8,7 @@ echo <<<END
         <id>cloudfoundry-cli</id>
         <title>Cloud Foundry Client</title>
         <version>$version</version>
-        <authors>Arthur Halet</authors>
+        <authors>Pivotal</authors>
         <owners>Arthur Halet</owners>
         <summary>install official command line client for Cloud Foundry.</summary>
         <description>official command line client for Cloud Foundry.
