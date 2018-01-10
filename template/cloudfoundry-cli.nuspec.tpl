@@ -19,6 +19,6 @@
         <iconUrl>https://cdn.rawgit.com/cloudfoundry-community/cf-chocolatey/master/icons/cf.png</iconUrl>
     </metadata>
     <files>
-        <file src="${buildDir}\\tools\\**" target="tools"/>
+        <file src="tools\*.*" target="tools"/>
     </files>
 </package>
