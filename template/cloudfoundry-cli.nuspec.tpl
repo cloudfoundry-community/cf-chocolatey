@@ -18,6 +18,10 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://cdn.rawgit.com/cloudfoundry-community/cf-chocolatey/master/icons/cf.png</iconUrl>
         <packageSourceUrl>https://github.com/cloudfoundry-community/cf-chocolatey</packageSourceUrl>
+        <docsUrl>https://docs.cloudfoundry.org/cf-cli/</docsUrl>
+        <bugTrackerUrl>https://github.com/cloudfoundry/cli/issues</bugTrackerUrl>
+        <projectSourceUrl>https://github.com/cloudfoundry/cli</projectSourceUrl>
+        <releaseNotes>https://github.com/cloudfoundry/cli/releases</releaseNotes>
     </metadata>
     <files>
         <file src="tools\*.*" target="tools"/>
