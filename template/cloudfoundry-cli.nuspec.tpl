@@ -17,6 +17,7 @@
         <licenseUrl>https://raw.githubusercontent.com/cloudfoundry/cli/master/LICENSE</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://cdn.rawgit.com/cloudfoundry-community/cf-chocolatey/master/icons/cf.png</iconUrl>
+        <packageSourceUrl>https://github.com/cloudfoundry-community/cf-chocolatey</packageSourceUrl>
     </metadata>
     <files>
         <file src="tools\*.*" target="tools"/>
