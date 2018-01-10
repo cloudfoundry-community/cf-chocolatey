@@ -1,0 +1,9 @@
+version: 1.0.{build}
+environment:
+  choco_apikey:
+    secure: 4xuHt7Rnvhe0ir+f43fuZNZx2kqra6Mu5ShaHOZB2jsSV5EGiGf7ZPmziDdqb0qS
+install:
+- ps: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+- ps: choco setapikey -k $env:choco_apikey -s https://push.chocolatey.org/
+build_script:
+- ps: .\build.ps1
