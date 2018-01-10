@@ -1,6 +1,8 @@
 # cf-chocolatey
 A [chocolatey package](https://chocolatey.org/packages/cloudfoundry-cli/) to install the official [Cloud Foundry CLI](http://docs.cloudfoundry.org/cf-cli/install-go-cli.html).
 
+[![Build status](https://ci.appveyor.com/api/projects/status/psn5gbwl5flex0g0/branch/master?svg=true)](https://ci.appveyor.com/project/ShawnNeal/cf-chocolatey/branch/master)
+
 ## CF CLI Installation
 
 1. [Install chocolatey](https://chocolatey.org/install)
