@@ -14,23 +14,27 @@ param (
 $buildDir = $pwd.Path
 $tplDir = Join-Path -Path $buildDir -ChildPath 'template'
 
-(Get-Content "$tplDir/cloudfoundry-cli.nuspec.tpl" -Raw).
-  Replace('${version}', $version).Replace('${buildDir}', $buildDir) | `
-  Set-Content "$buildDir/cloudfoundry-cli.nuspec" -Encoding utf8NoBOM
+# Write out nuspec file, force UTF-8 without BOM
+$nuspecContent = (Get-Content -Encoding utf8 -Raw "$tplDir\cloudfoundry-cli.nuspec.tpl").
+  Replace('${version}', $version)
 
+$utf8NoBom = New-Object System.Text.UTF8Encoding
+[System.IO.File]::WriteAllText("$buildDir\cloudfoundry-cli.nuspec", $nuspecContent, $utf8NoBom)
+
+# Write out the install PS script
 $toolsDir = Join-Path -Path $buildDir -ChildPath 'tools'
 New-Item -Path $toolsDir -ItemType Directory -Force
-(Get-Content "$tplDir/chocolateyinstall.ps1.tpl" -Raw).
+(Get-Content -Encoding utf8 -Raw "$tplDir\chocolateyinstall.ps1.tpl").
   Replace('${version}', $version) | `
-  Set-Content "$toolsDir/chocolateyinstall.ps1" -Encoding utf8BOM
+  Set-Content "$toolsDir\chocolateyinstall.ps1" -Encoding utf8
 
 if (-not (Test-Path env:ChocolateyInstall)) {
   Write-Error "Env var ChocolateyInstall doesn't exist. Is Chocolatey installed?"
 }
 
 $chocoBinDir = Join-Path -Path $env:ChocolateyInstall -ChildPath 'bin'
-Invoke-Expression "$chocoBinDir/cpack.exe $buildDir/cloudfoundry-cli.nuspec"
+Invoke-Expression "$chocoBinDir\cpack.exe $buildDir\cloudfoundry-cli.nuspec"
 
-Write-Output "Run:"
-Write-Output "choco push $buildDir/cloudfoundry-cli.$version.nupkg"
-Write-Output "to push the build artifact to Chocolatey.org"
+Write-Output ''
+Write-Output 'To push the build artifact to Chocolatey.org run:'
+Write-Output "choco push $buildDir\cloudfoundry-cli.$version.nupkg"
